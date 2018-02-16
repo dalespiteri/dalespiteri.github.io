@@ -1,0 +1,283 @@
+a {
+    color: inherit;
+    /* blue colors for links too */
+    text-decoration: none;
+    /* no underline */
+}
+
+a:hover {
+    color: inherit;
+    /* blue colors for links too */
+    text-decoration: none;
+    /* no underline */
+}
+
+body {
+    background-image: url('../images/redBackground.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Raleway', sans-serif;
+}
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0;
+}
+
+.frontPage {
+    display: flex;
+    align-items: center;
+}
+
+.logoRow div {
+    text-align: center;
+}
+
+.logoRow img {
+    width: 90%;
+}
+
+.socialRow div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.socialRow .socialIcon {
+    width: 75px;
+    height: 75px;
+    margin: 0 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialRow .socialIcon:hover {
+    border: 4px solid white;
+}
+
+.socialIcon i {
+    color: white;
+    font-size: 3em;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #00aced;
+}
+
+.instagram {
+    background-color: #bc2a8d;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4em;
+    letter-spacing: 10px;
+    font-weight: 900;
+    color: #F8CE4D;
+}
+
+.sideBob {
+    width: 100%;
+}
+
+.navBar {
+    width: 100%;
+    margin: 50px auto;
+}
+
+.navBar ul {
+    list-style: none;
+    background-color: #F8CE4D;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.navBar ul li {
+    display: inline;
+    font-size: 2em;
+    letter-spacing: 2px;
+    margin: 0 20px;
+}
+
+.navBar ul li:hover {
+    color: white;
+}
+
+.sidePic img {
+    width: 90%;
+}
+
+.about h2 {
+    text-transform: uppercase;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.about p {
+    color: white;
+    text-align: center;
+}
+
+.menuHeading {
+    text-align: center;
+}
+
+.menuPage {
+    margin: 0;
+}
+
+.menuPageRow {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.menuList {
+    list-style: none;
+    color: red;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    padding: 0;
+    margin: 0;
+}
+
+.menuList .burger {
+    text-align: center;
+    font-weight: 600;
+    padding: 10px;
+    margin: 15px 0;
+    background-color: #F02030;
+    color: white;
+    border: 1px solid white;
+}
+
+.menuList .burger {
+    border-radius: 20px 20px 0 0;
+}
+
+.menuList .burger:hover {
+    background-color: white;
+    color: #F02030;
+    border: 1px solid #F02030;
+    font-weight: 600;
+    transition: all 200ms;
+}
+
+.burgerPic {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.burgerPic img {
+    width: 33%;
+    padding-left: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    min-width: 125px;
+    position: relative;
+    /* visually center the images and offset the olives sticking past the top*/
+    bottom: 10%;
+}
+
+.burgerDescription {
+    margin: 20px;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    font-size: 1.1em;
+    background-color: white;
+    color: red;
+}
+
+.burgerDescription p {
+    margin: 0;
+    padding: 0;
+}
+
+.comboOption {
+    text-align: center;
+    color: white;
+    background-color: white;
+    padding: 30px 0;
+}
+
+.comboOption p {
+    padding: 10px;
+    border: 1px solid red;
+    color: red;
+}
+
+.testObject {
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+}
+
+.burgerDescription {
+    display: none;
+}
+
+.aboutPage {
+    display: flex;
+    align-items: center;
+}
+
+.aboutPageRow {
+    display: flex;
+    align-items: center;
+}
+
+.newNav {
+    width: 85px;
+    height: 100vh;
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    right: -85px;
+    top: 0;
+    transition: right 300ms;
+}
+
+.newNavItem {
+    width: 65px;
+    height: 65px;
+    border: 2px solid #F8CE4D;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F8CE4D;
+    font-size: 1.5em;
+}
+
+.newNavItem:hover {
+    background-color: #F8CE4D;
+    color: black;
+}
+
+.newNavAppear {
+    right: 0;
+}
+
+.TEST {
+    width: 100px;
+    height: 200px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
