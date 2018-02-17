@@ -10,13 +10,29 @@
     margin-top: 20px;
 }
 
+.locationButton:hover {
+    background-color: white;
+    color: #F02030;
+    font-weight: 900;
+}
+
 .map {
     margin-top: 30px;
     border: 10px solid white;
     height: 500px;
+    position: relative;
 }
 
 .map iframe {
     width: 100%;
     height: 100%;
+    position: absolute;
+}
+
+.mapFrame {
+    z-index: 1;
+}
+
+.topMap {
+    z-index: 2;
 }

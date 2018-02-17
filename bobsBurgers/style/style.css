@@ -1,3 +1,7 @@
+div:focus {
+    outline: 0 solid transparent;
+}
+
 a {
     color: inherit;
     /* blue colors for links too */
@@ -13,9 +17,8 @@ a:hover {
 }
 
 body {
-    background-image: url('../images/redBackground.jpg');
-    background-size: cover;
-    background-attachment: fixed;
+    background: url('../images/redBackground.jpg');
+    background-position: center;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -51,6 +54,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .socialRow .socialIcon:hover {
@@ -119,6 +123,7 @@ h1 {
     background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
     padding: 10px 20px;
     text-align: center;
+    border-left: #F8CE4D 10px solid;
 }
 
 .about p {
@@ -135,10 +140,8 @@ h1 {
 }
 
 .menuPageRow {
-    background-color: white;
     display: flex;
     align-items: center;
-    padding-top: 30px;
 }
 
 .menuList {
@@ -152,24 +155,10 @@ h1 {
 
 .menuList .burger {
     text-align: center;
-    font-weight: 600;
     padding: 10px;
     margin: 15px 0;
-    background-color: #F02030;
-    color: white;
-    border: 1px solid white;
-}
-
-.menuList .burger {
-    border-radius: 20px 20px 0 0;
-}
-
-.menuList .burger:hover {
-    background-color: white;
-    color: #F02030;
-    border: 1px solid #F02030;
-    font-weight: 600;
-    transition: all 200ms;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .burgerPic {
@@ -191,13 +180,14 @@ h1 {
 }
 
 .burgerDescription {
-    margin: 20px;
     padding: 15px;
     color: white;
     text-align: center;
     font-size: 1.1em;
-    background-color: white;
-    color: red;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    display: none;
 }
 
 .burgerDescription p {
@@ -208,24 +198,12 @@ h1 {
 .comboOption {
     text-align: center;
     color: white;
-    background-color: white;
     padding: 30px 0;
 }
 
 .comboOption p {
     padding: 10px;
-    border: 1px solid red;
-    color: red;
-}
-
-.testObject {
-    width: 100%;
-    height: 100%;
-    background-color: aquamarine;
-}
-
-.burgerDescription {
-    display: none;
+    border: 1px solid white;
 }
 
 .aboutPage {
@@ -249,7 +227,7 @@ h1 {
     align-items: flex-start;
     right: -85px;
     top: 0;
-    transition: right 300ms;
+    transition: all 300ms;
 }
 
 .newNavItem {
@@ -273,11 +251,126 @@ h1 {
     right: 0;
 }
 
-.TEST {
-    width: 100px;
-    height: 200px;
-    background-color: black;
-    position: absolute;
-    top: 0;
-    left: 0;
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.burgerBig {
+    animation-name: pulse;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+footer {
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footerRow {
+    display: flex;
+    align-items: flex-end;
+}
+
+.footerEmail {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.bottomSocialList {
+    list-style: none;
+    text-align: right;
+    font-size: 2.5em;
+}
+
+.bottomSocialList li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.radishListItem,
+.oliveListItem,
+.cheddarListItem,
+.shallotListItem,
+.beetListItem,
+.gourdListItem,
+.peasListItem,
+.eggListItem,
+.kaleListItem,
+.cornListItem,
+.chiveListItem,
+.avocadoListItem {
+    background: linear-gradient(to right, white 50%, #2971e5 50%);
+    background-size: 200%;
+    background-position: left;
+    transition: background-position 300ms;
+    font-weight: 600;
+    color: #F02030;
+}
+
+.radish:hover .radishListItem,
+.olive:hover .oliveListItem,
+.cheddar:hover .cheddarListItem,
+.shallot:hover .shallotListItem,
+.beet:hover .beetListItem,
+.gourd:hover .gourdListItem,
+.peas:hover .peasListItem,
+.egg:hover .eggListItem,
+.kale:hover .kaleListItem,
+.corn:hover .cornListItem,
+.chive:hover .chiveListItem,
+.avocado:hover .avocadoListItem {
+    background: linear-gradient(to right, white 50%, #2971e5 50%);
+    background-size: 200%;
+    background-position: right;
+    color: white;
+    font-weight: 900;
+    -webkit-box-shadow: inset 0px 0px 0px 2px white;
+    -moz-box-shadow: inset 0px 0px 0px 2px white;
+    box-shadow: inset 0px 0px 0px 2px white;
+}
+
+.radishBurgerPic:hover,
+.oliveBurgerPic:hover,
+.cheddarBurgerPic:hover,
+.shallotBurgerPic:hover,
+.beetBurgerPic:hover,
+.gourdBurgerPic:hover,
+.peasBurgerPic:hover,
+.eggBurgerPic:hover,
+.kaleBurgerPic:hover,
+.cornBurgerPic:hover,
+.chiveBurgerPic:hover,
+.avocadoBurgerPic:hover {
+    animation-name: pulse;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.burgerListHover {
+    background: linear-gradient(to right, white 50%, #2971e5 50%);
+    background-size: 200%;
+    background-position: right;
+    color: white;
+    font-weight: 900;
+    -webkit-box-shadow: inset 0px 0px 0px 2px white;
+    -moz-box-shadow: inset 0px 0px 0px 2px white;
+    box-shadow: inset 0px 0px 0px 2px white;
+    pointer-events: none;
+}
+
+.mobileBurger {
+    width: 50%;
+    max-width: 160px;
+    margin-bottom: 20px;
 }
